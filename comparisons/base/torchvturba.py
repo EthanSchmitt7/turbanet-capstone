@@ -77,7 +77,6 @@ dataset_size = 10000
 np.random.seed(seed)
 torch.manual_seed(seed)
 
-
 # Create torch model
 torch_models = [TorchModel(hidden_size, num_layers) for _ in range(swarm_size)]
 torch_optimizers = [
@@ -86,7 +85,8 @@ torch_optimizers = [
 
 # Create Turba model
 turba_model = JaxModel(hidden_size, num_layers)
-turba_state = TurbaTrainState.swarm(turba_model, swarm_size, 2, learning_rate=lr)
+turba_optimizer = optax.adam(learning_rate=lr)
+turba_state = TurbaTrainState.swarm(turba_model, turba_optimizer, swarm_size, 2)
 
 # Set torch to use GPU if available
 device = torch.device("cpu")

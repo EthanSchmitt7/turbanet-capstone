@@ -2,3 +2,5 @@
 The purpose of this project is to demonstrate the capability and
 features of the [TurbaNet](https://github.com/EthanSchmitt7/TurbaNet) library developed for my capstone project
 in pursuit of the MSAAI program at USD.
+
+![Average Stock Prediction Error](images/average_stock_prediction_errors.png)

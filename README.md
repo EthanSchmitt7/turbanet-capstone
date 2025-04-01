@@ -68,4 +68,4 @@ It is clear that the ensamble model performs better than the PyTorch model howev
 
 [^1]: NVIDIA RTX 2070 Super (8 GB VRAM)
 [^2]: AMD Ryzen 7 3700X 8-Core Processor
-[^3]: https://arxiv.org/pdf/2409.10661
+[^3]: Yi, X. (2024). A study of performance programming of CPU, GPU accelerated computers and SIMD architecture. arXiv. https://doi.org/10.48550/arXiv.2409.10661

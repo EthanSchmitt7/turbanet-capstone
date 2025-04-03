@@ -62,14 +62,14 @@ It is clear that the ensamble model performs better than the PyTorch model howev
 # Time Series Stock Prediction
 The final performance analysis was to try the capability of TurbaNet to train model simultaneously on different data to learn different trends. Take for example the problem of predicting a stock price over time. This is a well studied problem and LSTMs tend to be an acceptable solution, so that network architecture was used for this example. The problem comes when it is desired to predict 10s, 100s, or even 1000s of different stocks. With PyTorch, one would have to train each model individually but with TurbaNet, the models can be trained simultaneously leading to a massive performance boost.
 
-The chart below displays the distribution of the average errors across the testing data of the PyTorch and TurbaNet models for the 100 stocks that they were trained on. The analysis is a admittedly rather qualitative but it shows that the TurbaNet models achieve relatively similar performance to the PyTorch models.
+The chart below displays the distribution of the average errors across the testing data of the PyTorch and TurbaNet models for the 500 stocks that they were trained on. These distributions shows that the TurbaNet models achieve relatively similar or better performance on average to the PyTorch models.
 ![Average Stock Prediction Error](images/average_stock_prediction_errors.png)
 
-Where the results really get interesting is when the runtime of both these training sessions is examined. In this case PyTorch takes almost 24x longer to train all of the models as compared to TurbaNet. This experiment didn't seem to be stressing the limits of the GPU so it implies that this could be extended even further to train on even more stocks at once.
+Where the results really get interesting is when the runtime of both these training sessions is examined. In this case PyTorch takes roughly 40x longer to train all of the models as compared to TurbaNet. This experiment didn't seem to be stressing the limits of the GPU so it implies that this could be extended even further to train on even more stocks at once.
 | Model       | Training Time (s) | Time per Stock (s) |
 | ----------- | ----------------- | ------------------ |
-| PyTorch     | 557.57            | 5.5757             |
-| Turba       | **23.39**         | **0.2339**         |
+| PyTorch     | 9560.44            | 19.12088          |
+| Turba       | **224.51**         | **0.44902**       |
 
 [^1]: NVIDIA RTX 2070 Super (8 GB VRAM)
 [^2]: AMD Ryzen 7 3700X 8-Core Processor

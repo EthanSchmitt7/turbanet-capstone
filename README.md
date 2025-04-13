@@ -11,7 +11,10 @@ cd turbanet-capstone
 Ensure you have [Python 3.12](https://www.python.org/downloads/release/python-3126/) installed.
 
 ### Install Python Dependencies
-`pip install -r requirements.txt`
+Create and activate your virtual environment, then run the following command
+```
+pip install -r requirements.txt
+```
 
 ### (Optional) Enable GPU Acceleration
 #### PyTorch
@@ -26,8 +29,8 @@ print(torch.cuda.is_available())  # should return True if GPU is available
 See the [JAX GPU installation guide](https://docs.jax.dev/en/latest/installation.html) for platform-specific commands.
 You can verify that JAX is using the GPU with:
 ```python
-from jax.lib import xla_bridge
-print(xla_bridge.get_backend().platform)  # should return 'gpu' if enabled
+from jax.extend.backend import get_backend
+print(get_backend().platform)  # should return 'gpu' if enabled
 ```
 
 

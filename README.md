@@ -1,6 +1,36 @@
 # USD MSAAI-590 Capstone Project
 The purpose of this project is to demonstrate the capability and features of the [TurbaNet](https://github.com/EthanSchmitt7/TurbaNet) library developed for my capstone project in pursuit of the MSAAI program at USD.
 
+## Installation Instructions
+### Clone the Repository
+```bash
+git clone git@github.com:EthanSchmitt7/AAI590-final-project.git
+cd AAI590-final-project
+```
+### Install Python
+Ensure you have [Python 3.12](https://www.python.org/downloads/release/python-3126/) installed.
+
+### Install Python Dependencies
+`pip install -r requirements.txt`
+
+### (Optional) Enable GPU Acceleration
+#### PyTorch
+Follow the official [PyTorch installation instructions](https://pytorch.org/get-started/locally/) to install the appropriate CUDA-enabled version of PyTorch for your system.
+You can verify that PyTorch is using the GPU with:
+```python
+import torch
+print(torch.cuda.is_available())  # should return True if GPU is available
+```
+
+#### TurbaNet (JAX):
+See the [JAX GPU installation guide](https://docs.jax.dev/en/latest/installation.html) for platform-specific commands.
+You can verify that JAX is using the GPU with:
+```python
+from jax.lib import xla_bridge
+print(xla_bridge.get_backend().platform)  # should return 'gpu' if enabled
+```
+
+
 ## TurbaNet
 TurbaNet is a neural network training library designed to optimize the simultaneous training of multiple small-scale models. Unlike traditional deep learning frameworks like PyTorch, which typically optimize for large, single-model training, TurbaNet leverages parallel computation to significantly improve efficiency when training multiple networks at once.
 

@@ -86,7 +86,7 @@ tornado==6.4.2
 tqdm==4.67.1
 traitlets==5.14.3
 treescope==0.1.9
--e git+ssh://git@github.com/EthanSchmitt7/Turba.git@78ae9612002dbb25fb206298985095ca4257d7f8#egg=turbanet
+turbanet==0.3.0
 typing_extensions==4.12.2
 tzdata==2025.1
 urllib3==2.3.0

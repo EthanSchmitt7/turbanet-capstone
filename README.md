@@ -1,11 +1,11 @@
-# USD MSAAI-590 Capstone Project
+# USD | MSAAI 590 | Capstone Project (TurbaNet)
 The purpose of this project is to demonstrate the capability and features of the [TurbaNet](https://github.com/EthanSchmitt7/TurbaNet) library developed for my capstone project in pursuit of the MSAAI program at USD.
 
 ## Installation Instructions
 ### Clone the Repository
 ```bash
-git clone git@github.com:EthanSchmitt7/AAI590-final-project.git
-cd AAI590-final-project
+git clone git@github.com:EthanSchmitt7/turbanet-capstone.git
+cd turbanet-capstone
 ```
 ### Install Python
 Ensure you have [Python 3.12](https://www.python.org/downloads/release/python-3126/) installed.
